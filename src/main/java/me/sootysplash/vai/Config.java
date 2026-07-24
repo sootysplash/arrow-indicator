@@ -16,7 +16,7 @@ public class Config {
     private static Config instance;
 
     public boolean enabled = true;
-    public boolean tippedArrowColors = false;
+    public boolean tippedArrowColors = true;
     public boolean countFireworks = true;
     public int ammoColor = Color.YELLOW.getRGB();
     public int maxAmmoStack = 99;

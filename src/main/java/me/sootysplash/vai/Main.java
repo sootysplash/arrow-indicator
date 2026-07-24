@@ -3,7 +3,7 @@ package me.sootysplash.vai;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Font;
-import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.InteractionHand;
@@ -44,7 +44,8 @@ public class Main implements ModInitializer {
             projItemData.firstAmmo().set(mc.player.getProjectile(new ItemStack(projItemData.pwi())));
         }
         Inventory inventory = lp.getInventory();
-        for (ItemStack is : inventory) {
+        for (int i = 0; i < inventory.getContainerSize(); i++) {
+            ItemStack is = inventory.getItem(i);
             for (ProjItemData projItemData : projItems) {
                 if (!projItemData.pwi().getAllSupportedProjectiles().test(is)) {
                     continue;
@@ -68,7 +69,7 @@ public class Main implements ModInitializer {
         }
     }
 
-    public static void doDraw(GuiGraphicsExtractor gge, Font font, ItemStack itemStack, int x, int y, String countText) {
+    public static void doDraw(GuiGraphics gge, Font font, ItemStack itemStack, int x, int y, String countText) {
         ProjItemData projItemDataCast = null;
         for (ProjItemData projItemData : projItems) {
             if (projItemData.pwi() == itemStack.getItem()) {
@@ -96,6 +97,6 @@ public class Main implements ModInitializer {
             drawColor = tip.getColor();
         }
         String text = String.valueOf(Math.min(ammoC, Config.getInstance().maxAmmoStack));
-        gge.text(font, text, x + 19 - 2 - font.width(text), y + 6 + 3, drawColor, true);
+        gge.drawString(font, text, x + 19 - 2 - font.width(text), y + 6 + 3, drawColor, true);
     }
 }
