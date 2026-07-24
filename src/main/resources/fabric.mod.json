@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "vanilla-arrow-indicator",
+  "version": "${version}",
+  "name": "Vanilla Arrow Indicator",
+  "description": "Draws a number over (cross-)bows to indicate the available ammo within your inventory.",
+  "authors": ["Sootysplash"],
+  "contact": {},
+  "license": "GPL-3.0",
+  "icon": "assets/vanilla-arrow-indicator/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "me.sootysplash.vai.Main"
+    ],
+    "modmenu": [
+      "me.sootysplash.vai.ModMenu"
+    ]
+  },
+  "mixins": [
+    "vanilla-arrow-indicator.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}",
+    "cloth-config": "*"
+  }
+}
