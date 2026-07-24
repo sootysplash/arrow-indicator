@@ -49,7 +49,7 @@ public class Main implements ModInitializer {
                 if (!projItemData.pwi().getAllSupportedProjectiles().test(is)) {
                     continue;
                 }
-                projItemData.ammoCount().addAndGet(is.count());
+                projItemData.ammoCount().addAndGet(is.getCount());
             }
         }
 
@@ -61,7 +61,7 @@ public class Main implements ModInitializer {
                         continue;
                     }
                     if (projItemData.pwi().getSupportedHeldProjectiles().test(is)) {
-                        projItemData.ammoCount().addAndGet(is.count());
+                        projItemData.ammoCount().addAndGet(is.getCount());
                     }
                 }
             }
