@@ -73,6 +73,6 @@ public class ModMenu implements ModMenuApi {
     }
     
     private static Component compText(String str) {
-        return compText(str);
+        return Component.literal(str);
     }
 }
