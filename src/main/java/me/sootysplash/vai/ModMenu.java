@@ -32,7 +32,7 @@ public class ModMenu implements ModMenuApi {
 
 
             behavior.addEntry(cfgent.startBooleanToggle(compText("Use Tipped Arrow Colors"), config.tippedArrowColors)
-                    .setDefaultValue(false)
+                    .setDefaultValue(true)
                     .setTooltip(compText("Color ammo indicators based on the tipped arrow effect?"))
                     .setSaveConsumer(newValue -> config.tippedArrowColors = newValue)
                     .build());
