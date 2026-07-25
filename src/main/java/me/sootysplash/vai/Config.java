@@ -20,7 +20,7 @@ public class Config {
     public boolean countFireworks = true;
     public int ammoColor = Color.YELLOW.getRGB();
     public int maxAmmoStack = 99;
-    public int onlyShowAmmoBelow = 16;
+    public int onlyShowAmmoBelow = 9999;
 
     public void save() {
         try {
