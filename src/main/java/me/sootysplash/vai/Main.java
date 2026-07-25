@@ -20,7 +20,7 @@ import java.util.concurrent.atomic.AtomicReference;
 public class Main implements ModInitializer {
 
     public static final Minecraft mc = Minecraft.getInstance();
-    public static final Logger LOGGER = LoggerFactory.getLogger("VanillaArrowIndicator");
+    public static final Logger LOGGER = LoggerFactory.getLogger("ArrowIndicator");
 
     @Override
     public void onInitialize() {
