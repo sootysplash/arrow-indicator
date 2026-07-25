@@ -11,7 +11,7 @@ import java.nio.file.Path;
 
 public class Config {
 
-    private static final Path file = FabricLoader.getInstance().getConfigDir().resolve("vanilla-arrow-indicator.json");
+    private static final Path file = FabricLoader.getInstance().getConfigDir().resolve("arrow-indicator.json");
     private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     private static Config instance;
 
