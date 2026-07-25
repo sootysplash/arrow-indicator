@@ -1,13 +1,13 @@
 {
   "schemaVersion": 1,
-  "id": "vanilla-arrow-indicator",
+  "id": "arrow-indicator",
   "version": "${version}",
-  "name": "Vanilla Arrow Indicator",
+  "name": "Arrow Indicator",
   "description": "Draws a number over (cross-)bows to indicate the available ammo within your inventory.",
   "authors": ["Sootysplash"],
   "contact": {},
   "license": "GPL-3.0",
-  "icon": "assets/vanilla-arrow-indicator/icon.png",
+  "icon": "assets/arrow-indicator/icon.png",
   "environment": "client",
   "entrypoints": {
     "main": [
@@ -18,7 +18,7 @@
     ]
   },
   "mixins": [
-    "vanilla-arrow-indicator.mixins.json"
+    "arrow-indicator.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",
